@@ -16,6 +16,7 @@ namespace FightingGame.CharacterCreation
         public int health;
         public int strength;
         public int dexterity;
+        public int dodgeChance;
 
         public void AskUserToCreateCharacter()
         {
@@ -23,7 +24,6 @@ namespace FightingGame.CharacterCreation
             UserAssignsClassValuesForCharacter();
             PrintUsersCharacterSheet();
             AllowUserToEditCharacter();
-            CharacterCreationUtilities.AskUserToContinue();
         }
 
         public void UserAssignsCharcterName()
@@ -50,6 +50,7 @@ namespace FightingGame.CharacterCreation
                     health = usersClass.health;
                     strength = usersClass.strength;
                     dexterity = usersClass.dexterity;
+                    dodgeChance = usersClass.dodgeChance;
                     break;
                 case "2":
                     usersClass.Rogue();
@@ -57,16 +58,16 @@ namespace FightingGame.CharacterCreation
                     health = usersClass.health;
                     strength = usersClass.strength;
                     dexterity = usersClass.dexterity;
+                    dodgeChance = usersClass.dodgeChance;
                     break;
                 default:
                     throw new ArgumentException("invalid");
             }
+            Console.Clear();
         }
 
         public void PrintUsersCharacterSheet()
         {
-            Console.Clear();
-
             Console.WriteLine(
                 $"Character Sheet\n" +
                 "------------------\n\n" +

@@ -13,6 +13,7 @@ namespace FightingGame.CharacterCreation
         public int strength;
         public int dexterity;
         public int weaponDamage;
+        public int dodgeChance;
 
         public void Warrior()
         {
@@ -21,6 +22,7 @@ namespace FightingGame.CharacterCreation
             strength = 20;
             dexterity = 10;
             weaponDamage = 20;
+            dodgeChance = 25;
         }
 
         public void Rogue()
@@ -30,6 +32,7 @@ namespace FightingGame.CharacterCreation
             strength = 10;
             dexterity = 20;
             weaponDamage = 15;
+            dodgeChance = 50;
         }
 
     }

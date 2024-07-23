@@ -15,7 +15,7 @@ namespace FightingGame.CharacterCreation
                 "PLease select from the options below\n\n" +
                 "1: Change name\n" +
                 "2: Change class\n");
-            Console.Write("\nId like to select option: ");
+            Console.Write("\nSelect option: ");
 
             string optionUserSelected = Console.ReadLine();
 
@@ -49,7 +49,6 @@ namespace FightingGame.CharacterCreation
 
         public static void AskUserToContinue()
         {
-            Console.Clear();
             Console.WriteLine();
             Console.Write("Press enter to continue.");
             Console.ReadLine();
