@@ -109,29 +109,45 @@ namespace FightingGame.Game
 
                 if (player1Action == "1")
                 {
+                    player1.dodgeChance -= (player1.dexterity * 2);
+
                     int attackChanceofSucceeding = RunGameUtilities.AttackChance();
 
                     if (attackChanceofSucceeding >= player2.dodgeChance)
                     {
                         player2.health -= player1.strength;
 
-                        if (player2.dodgeChance != 50)
-                        {
-                            player2.dodgeChance -= (player2.dexterity * 2);
-                        }
+                        Console.Clear();
+                        PrintUtilities.PrintLinesInCenter(
+                            "--------------------------\n",
+                            "Attack Hit!\n",
+                            "--------------------------\n",
+                            "Press Enter");
+                        Console.ReadLine();
                     }
                     else
                     {
-                        Console.WriteLine(
-                            "\n--------------------------\n" +
-                            "Attack Missed!\n");
-                        CharacterCreationUtilities.AskUserToContinue();
+                        Console.Clear();
+                        PrintUtilities.PrintLinesInCenter(
+                            "--------------------------\n",
+                            "Attack Missed!\n",
+                            "--------------------------\n",
+                            "Press Enter");
+                        Console.ReadLine();
                     }
 
                 }
                 else if (player1Action == "2")
                 {
                     player1.dodgeChance += (player1.dodgeChance * 2);
+
+                    Console.Clear();
+                    PrintUtilities.PrintLinesInCenter(
+                        "--------------------------\n",
+                        "Ready Dodge!\n",
+                        "--------------------------\n",
+                        "Press Enter");
+                    Console.ReadLine();
                 }
         }
             
@@ -153,29 +169,45 @@ namespace FightingGame.Game
 
                 if (player1Action == "1")
                 {
+                    player2.dodgeChance -= (player2.dexterity * 2);
+
                     int attackChanceofSucceeding = RunGameUtilities.AttackChance();
 
                     if (attackChanceofSucceeding >= player1.dodgeChance)
                     {
                         player1.health -= player2.strength;
 
-                        if (player1.dodgeChance != 50)
-                        {
-                            player1.dodgeChance -= (player1.dexterity * 2);
-                        }
+                        Console.Clear();
+                        PrintUtilities.PrintLinesInCenter(
+                            "--------------------------\n",
+                            "Attack Hit!\n",
+                            "--------------------------\n",
+                            "Press Enter");
+                        Console.ReadLine();
                     }
                     else
                     {
-                        Console.WriteLine(
-                            "\n--------------------------\n" +
-                            "Attack Missed!\n");
-                        CharacterCreationUtilities.AskUserToContinue();
+                        Console.Clear();
+                        PrintUtilities.PrintLinesInCenter(
+                            "--------------------------\n",
+                            "Attack Missed!\n",
+                            "--------------------------\n",
+                            "Press Enter");
+                        Console.ReadLine();
                     }
 
                 }
                 else if (player1Action == "2")
                 {
                     player2.dodgeChance += (player2.dodgeChance * 2);
+
+                    Console.Clear();
+                    PrintUtilities.PrintLinesInCenter(
+                        "--------------------------\n",
+                        "Ready Dodge!\n",
+                        "--------------------------\n",
+                        "Press Enter");
+                    Console.ReadLine();
                 }
         }
         }

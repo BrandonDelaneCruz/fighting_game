@@ -32,7 +32,7 @@ namespace FightingGame.CharacterCreation
             strength = 10;
             dexterity = 20;
             weaponDamage = 15;
-            dodgeChance = 50;
+            dodgeChance = 25;
         }
 
     }
