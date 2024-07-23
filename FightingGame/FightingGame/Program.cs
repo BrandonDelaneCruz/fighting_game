@@ -3,3 +3,4 @@ using FightingGame.CharacterCreation;
 using FightingGame.Game;
 
 FightingGameFactory.GameApplication();
+
